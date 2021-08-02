@@ -5,7 +5,10 @@ class Show < ActiveRecord::Base
 
     def actors_list
         self.actors.collect do |char|
-            "#{char.first_name} - #{char.last_name}"
+            "#{char.first_name} #{char.last_name}"
         end.join
     end
+
 end
+
+#binding.pry
